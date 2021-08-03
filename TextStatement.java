@@ -8,13 +8,13 @@ public class TextStatement extends Statement {
       while (rentals.hasMoreElements()) {
          Rental each = (Rental) rentals.nextElement();
          //show figures for this rental
-         result += "\t" + each.getMovie().getTitle()+ "\t" +
+         result += each.getMovie().getTitle()+ ": " +
          String.valueOf(each.getCharge()) + "\n";
       }
       //add footer lines
-      result += "Amount owed is " +
+      result += "You owe " +
       String.valueOf(aCustomer.getTotalCharge()) + "\n";
-      result += "You earned " +
+      result += "On this rental you earned " +
       String.valueOf(aCustomer.getTotalFrequentRenterPoints()) +
       " frequent renter points";
       return result;
